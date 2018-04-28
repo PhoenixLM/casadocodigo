@@ -1,0 +1,32 @@
+<% include ../includes/header.ejs %>
+
+    <div>
+        <div class ="container min-container">
+           
+           <!-- INSIRA O CÓDIGO AQUI -->
+           <h2 class="basic-title">Listagem de livros</h2> 
+           
+           <table class="table table-condensed table-bordered table-striped table-hover">
+               <thead>
+               <tr>
+                   <td>Titulo</td>
+                   <td>Preco</td>
+                   <td>Descricao</td>
+               </tr>
+               </thead>
+               <tbody>
+                   <% for(let i=0; i<lista.length; i++) {%>
+                        <tr>
+                            <td><%= lista[i].titulo    %></td>
+                            <td><%= lista[i].preco     %></td>
+                            <td><%= lista[i].descricao %></td>
+                        </tr>
+                   <%} %>
+               </tbody>
+           </table>
+           <a href="/produtos/form" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Novo livro</a>
+        </div>
+    </div>
+
+<% include ../includes/footer.ejs %>
+
